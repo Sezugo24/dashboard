@@ -1,1 +1,29 @@
-<p>barras works!</p>
+<h3 style=" color: #212121; font-family: 'Syne Mono', monospace; text-align: center;">Gráfica de Barras</h3>
+<p style=" color: #212121; font-family: 'Syne Mono', monospace; text-align: center;">Datos de la popularidad de las principales compañias que manufacturan videojuegos y videoconsolas</p>
+
+
+
+<div class="row">
+    <div class="col">
+
+        <div style="display: block">
+            <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+            </canvas>
+          </div>
+          <small style="font-size: 10px;">datos simulados, carecen de validez</small> 
+          <div class="col text-center">
+            <button  type="button" class="btn btn-dark" (click)="randomize()" style="margin-right: 5px;">Predecir</button>
+            <button  type="button" class="btn btn-dark" (click)="randomize2()" >Reiniciar</button>
+          </div>
+         
+
+    </div>
+</div>
+
+
+

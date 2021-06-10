@@ -1,1 +1,27 @@
-<p>donas works!</p>
+<h3 style=" color: #212121; font-family: 'Syne Mono', monospace; text-align: center;">Gráfica de Donas</h3>
+<p style=" color: #212121; font-family: 'Syne Mono', monospace; text-align: center;">Información por billones de usuarios de las Redes Sociales mas utilizadas globalmente</p>
+
+<hr>
+
+<div *ngIf="doughnutChartData.length === 0; else divGrafica" class="alert" style="background-color: #D9C2A9;">
+  <a>Cargando Información... Espere un segundo!</a>
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <<ng-template #divGrafica>
+      <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [chartType]="doughnutChartType"
+          [colors]="colors">
+          
+        </canvas>
+    </div>
+    </ng-template>
+    
+
+    
+</div>

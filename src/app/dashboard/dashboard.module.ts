@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChartsModule } from 'ng2-charts';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { BarrasComponent } from './pages/barras/barras.component';
 import { BarrasDobleComponent } from './pages/barras-doble/barras-doble.component';
 import { DonasComponent } from './pages/donas/donas.component';
 import { DonasHttpComponent } from './pages/donas-http/donas-http.component';
-import { MenuComponent } from './shared/menu/menu.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+
 
 
 @NgModule({
@@ -15,13 +15,12 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     BarrasComponent,
     BarrasDobleComponent,
     DonasComponent,
-    DonasHttpComponent,
-    MenuComponent,
-    NavbarComponent
+    DonasHttpComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    ChartsModule
   ]
 })
 export class DashboardModule { }
